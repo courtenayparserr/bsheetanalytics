@@ -1,0 +1,7 @@
+C:\Users\Domagoj\Sources\Private\upWork\Pet Heaven\Installer\CustomAction\obj\Debug\CustomAction.csprojResolveAssemblyReference.cache
+C:\Users\Domagoj\Sources\Private\upWork\Pet Heaven\Installer\CustomAction\obj\Debug\CustomAction.Installer1.resources
+C:\Users\Domagoj\Sources\Private\upWork\Pet Heaven\Installer\CustomAction\obj\Debug\CustomAction.csproj.GenerateResource.Cache
+C:\Users\Domagoj\Sources\Private\upWork\Pet Heaven\Installer\CustomAction\bin\Debug\CustomAction.dll
+C:\Users\Domagoj\Sources\Private\upWork\Pet Heaven\Installer\CustomAction\bin\Debug\CustomAction.pdb
+C:\Users\Domagoj\Sources\Private\upWork\Pet Heaven\Installer\CustomAction\obj\Debug\CustomAction.dll
+C:\Users\Domagoj\Sources\Private\upWork\Pet Heaven\Installer\CustomAction\obj\Debug\CustomAction.pdb

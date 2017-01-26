@@ -1,0 +1,3 @@
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstaller\bin\Debug\cab1.cab
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstaller\bin\Debug\WIXInstaller.msi
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstaller\bin\Debug\WIXInstaller.wixpdb

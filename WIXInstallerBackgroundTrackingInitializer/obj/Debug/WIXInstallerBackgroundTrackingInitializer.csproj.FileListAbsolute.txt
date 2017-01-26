@@ -1,0 +1,24 @@
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingInitializer\obj\Debug\WIXInstallerBackgroundTrackingInitializer.csprojResolveAssemblyReference.cache
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Newtonsoft.Json.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingInitializer\bin\Debug\System.Data.SQLite.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingInitializer\bin\Debug\WIXInstallerBackgroundTrackingModels.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingInitializer\bin\Debug\WIXInstallerBackgroundTrackingModels.pdb
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Newtonsoft.Json.xml
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingInitializer\bin\Debug\System.Data.SQLite.xml
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Initializer.exe.config
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Initializer.exe
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Initializer.pdb
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingInitializer\obj\Debug\Initializer.exe
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingInitializer\obj\Debug\Initializer.pdb
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Initializer.exe.config
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Initializer.exe
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Initializer.pdb
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Newtonsoft.Json.dll
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitializer\bin\Debug\System.Data.SQLite.dll
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitializer\bin\Debug\WIXInstallerBackgroundTrackingModels.dll
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitializer\bin\Debug\WIXInstallerBackgroundTrackingModels.pdb
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Newtonsoft.Json.xml
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitializer\bin\Debug\System.Data.SQLite.xml
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitializer\obj\Debug\WIXInstallerBackgroundTrackingInitializer.csprojResolveAssemblyReference.cache
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitializer\obj\Debug\Initializer.exe
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitializer\obj\Debug\Initializer.pdb

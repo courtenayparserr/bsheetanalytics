@@ -1,0 +1,11 @@
+obj\Debug\Product.wixobj
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstaller\bin\Debug\cab1.cab
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstaller\bin\Debug\WIXInstaller.msi
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstaller\bin\Debug\WIXInstaller.wixpdb
+obj\Debug\WIXInstaller.wixproj.BindContentsFileListnull.txt
+obj\Debug\WIXInstaller.wixproj.BindOutputsFileListnull.txt
+obj\Debug\WIXInstaller.wixproj.BindBuiltOutputsFileListnull.txt
+obj\Debug\UserRegistrationDlg.wixobj
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstaller\bin\Debug\cab1.cab
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstaller\bin\Debug\WIXInstaller.msi
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstaller\bin\Debug\WIXInstaller.wixpdb

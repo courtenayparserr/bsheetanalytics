@@ -1,0 +1,24 @@
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\WIXInstallerBackgroundTrackingCustomActions.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\WIXInstallerBackgroundTrackingCustomActions.CA.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\WIXInstallerBackgroundTrackingCustomActions.pdb
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\Microsoft.Deployment.WindowsInstaller.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\Microsoft.Deployment.WindowsInstaller.xml
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingCustomActions\obj\x86\Debug\WIXInstallerBackgroundTrackingCustomActions.csprojResolveAssemblyReference.cache
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingCustomActions\obj\x86\Debug\WIXInstallerBackgroundTrackingCustomActions.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingCustomActions\obj\x86\Debug\WIXInstallerBackgroundTrackingCustomActions.pdb
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\Newtonsoft.Json.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\WIXInstallerBackgroundTrackingModels.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\WIXInstallerBackgroundTrackingModels.pdb
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\Newtonsoft.Json.xml
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\WIXInstallerBackgroundTrackingCustomActions.dll
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\WIXInstallerBackgroundTrackingCustomActions.CA.dll
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\WIXInstallerBackgroundTrackingCustomActions.pdb
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\Microsoft.Deployment.WindowsInstaller.dll
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\Newtonsoft.Json.dll
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\WIXInstallerBackgroundTrackingModels.dll
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\WIXInstallerBackgroundTrackingModels.pdb
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\Newtonsoft.Json.xml
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingCustomActions\bin\Debug\Microsoft.Deployment.WindowsInstaller.xml
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingCustomActions\obj\x86\Debug\WIXInstallerBackgroundTrackingCustomActions.csprojResolveAssemblyReference.cache
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingCustomActions\obj\x86\Debug\WIXInstallerBackgroundTrackingCustomActions.dll
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingCustomActions\obj\x86\Debug\WIXInstallerBackgroundTrackingCustomActions.pdb

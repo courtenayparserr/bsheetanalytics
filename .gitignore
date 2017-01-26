@@ -1,0 +1,15 @@
+procrastitracker/Release
+procrastitracker/Debug
+PT/procrastitracker.exe
+ipch/
+*.pdb
+*.ncb
+*.iobj
+*.ipdb
+*.suo
+*.sdf
+*.opensdf
+*.aps
+/ProcrastiTracker_Setup.exe
+*.bak
+procrastitracker/packages

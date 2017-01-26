@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="Beam" Language="1033" Version="1.0.0.0" Manufacturer="Microsoft" UpgradeCode="ba663be3-2996-4b4a-b8f6-80f02001f01a">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <Binary Id="WIXInstallerBackgroundTrackingCustomActions" SourceFile="..\WIXInstallerBackgroundTrackingCustomActions\bin\$(var.Configuration)\WIXInstallerBackgroundTrackingCustomActions.CA.dll" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+    
+    <Upgrade Id="{5A5A08BA-0115-4451-8140-DC7511633495}">
+      <UpgradeVersion OnlyDetect='yes' Property='FOUND_RELATED_PACAKGE' Minimum='1.0.0.0' />
+    </Upgrade>
+    
+    <CustomAction Id="CheckUserEmail"  Return="check" Execute="immediate" BinaryKey="WIXInstallerBackgroundTrackingCustomActions" DllEntry="CheckUserEmail" />
+    <CustomAction Id="InitializeDatabase"  Return="check" Execute="immediate" Impersonate="yes" BinaryKey="WIXInstallerBackgroundTrackingCustomActions" DllEntry="InitializeDatabase" />
+    
+    <CustomAction Id="LaunchApp" Directory="INSTALLFOLDER" ExeCommand="[SystemFolder]cmd.exe /C start $(var.procrastitracker.TargetFileName)" />
+
+    
+    <InstallExecuteSequence>
+      <Custom Action="InitializeDatabase" After="InstallFinalize">NOT Installed AND NOT REMOVE</Custom>
+      <Custom Action="LaunchApp" After="InstallFinalize" >NOT REMOVE</Custom>
+    </InstallExecuteSequence>
+    
+
+		<Feature Id="DefaultFeature" Title="Background tracking" Level="1">
+			<ComponentRef Id="MainExecutable" />
+      
+      <ComponentRef Id="concrt140DLL" />
+      <ComponentRef Id="concrt140dDLL" />
+      <ComponentRef Id="cpprest140d_2_9DLL" />
+      <ComponentRef Id="cpprest140_2_9DLL" />
+      <ComponentRef Id="msvcp140DLL" />
+      <ComponentRef Id="msvcp140dDLL" />
+      <ComponentRef Id="procrastitrackerIOBJ" />
+      <ComponentRef Id="procrastitrackerIPDB" />
+      <ComponentRef Id="ucrtbasedDLL" />
+      <ComponentRef Id="vcruntime140DLL" />
+      <ComponentRef Id="vcruntime140dDLL" />
+      <ComponentRef Id="wastorageDLL" />
+      
+      
+      <ComponentRef Id="DatabaseFolderCreate" />
+      <ComponentRef Id="WIXInstallerBackgroundTrackingInitializerEXE" />
+
+      <ComponentRef Id="SQLiteInitializerDLL" />
+      <ComponentRef Id="NewtonsoftJsonInitializerDLL" />
+      <ComponentRef Id="SQLiteInteropInitializerDLL" />
+      <ComponentRef Id="WIXInstallerBackgroundTrackingModelsInitializerDLL" />
+
+    </Feature>
+  
+    <!--<Feature Id='Complete' Title='Background tracking' Description='The complete package.'
+      Display='expand' Level='0' ConfigurableDirectory='INSTALLFOLDER'>
+      <Feature Id='MainProgram' Title='Program' Description='The main executable.' Level='0'>
+        <ComponentRef Id="MainExecutable" />
+        <ComponentRef Id="EntityFrameworkDLL" />
+        <ComponentRef Id="NDdeDLL" />
+        <ComponentRef Id="SQLiteDLL" />
+        <ComponentRef Id="SQLiteEF6DLL" />
+        <ComponentRef Id="SQLiteLINQDLL" />
+        <ComponentRef Id="TaskDataflowDLL" />   
+      </Feature>
+
+    </Feature>-->
+    
+    
+    
+  
+    <!--<UIRef Id="MyWixUI_Mondo" />
+    <UIRef Id="WixUI_ErrorProgressText" />-->
+    
+    <UI Id="MyUIDialogs">
+      
+      <TextStyle Id="WixUI_Font_Normal" FaceName="Tahoma" Size="8" />
+      <TextStyle Id="WixUI_Font_Bigger" FaceName="Tahoma" Size="12" />
+      <TextStyle Id="WixUI_Font_Title" FaceName="Tahoma" Size="9" Bold="yes" />
+
+      <Property Id="DefaultUIFont" Value="WixUI_Font_Normal" />
+      <Property Id="WixUI_Mode" Value="Mondo" />
+
+      <DialogRef Id="ErrorDlg" />
+      <DialogRef Id="FatalError" />
+      <DialogRef Id="FilesInUse" />
+      <DialogRef Id="MsiRMFilesInUse" />
+      <DialogRef Id="PrepareDlg" /> 
+      <DialogRef Id="ProgressDlg" />
+      <DialogRef Id="ResumeDlg" />
+      <DialogRef Id="UserExit" />
+      <DialogRef Id="UserRegistrationDlg" />
+      
+            
+
+      <Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish>
+
+      <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="UserRegistrationDlg">NOT Installed AND NOT PATCH</Publish>
+      <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg">Installed AND PATCH</Publish>
+      
+      <!--<Publish Dialog="UserRegistrationDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>-->
+
+      <Publish Dialog="LicenseAgreementDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg">1</Publish>
+      <Publish Dialog="LicenseAgreementDlg" Control="Next" Event="NewDialog" Value="SetupTypeDlg" Order="2">LicenseAccepted = "1"</Publish>
+
+      <Publish Dialog="SetupTypeDlg" Control="Back" Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
+      <Publish Dialog="SetupTypeDlg" Control="TypicalButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+      <Publish Dialog="SetupTypeDlg" Control="CustomButton" Event="NewDialog" Value="CustomizeDlg">1</Publish>
+      <Publish Dialog="SetupTypeDlg" Control="CompleteButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+
+      <Publish Dialog="CustomizeDlg" Control="Back" Event="NewDialog" Value="MaintenanceTypeDlg" Order="1">WixUI_InstallMode = "Change"</Publish>
+      <Publish Dialog="CustomizeDlg" Control="Back" Event="NewDialog" Value="SetupTypeDlg" Order="2">WixUI_InstallMode = "InstallCustom"</Publish>
+      <Publish Dialog="CustomizeDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+
+      <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="UserRegistrationDlg"></Publish>
+      
+            <!--<Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="UserRegistrationDlg" Order="1">WixUI_InstallMode = "InstallCustom"</Publish>
+            <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="UserRegistrationDlg" Order="2">WixUI_InstallMode = "InstallTypical" OR WixUI_InstallMode = "InstallComplete"</Publish>
+            <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="UserRegistrationDlg" Order="3">WixUI_InstallMode = "Change"</Publish>
+            <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="UserRegistrationDlg" Order="4">WixUI_InstallMode = "Repair" OR WixUI_InstallMode = "Remove"</Publish>
+            <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="UserRegistrationDlg" Order="2">WixUI_InstallMode = "Update"</Publish>-->
+
+      <Publish Dialog="MaintenanceWelcomeDlg" Control="Next" Event="NewDialog" Value="MaintenanceTypeDlg">1</Publish>
+
+      <Publish Dialog="MaintenanceTypeDlg" Control="ChangeButton" Event="NewDialog" Value="CustomizeDlg">1</Publish>
+      <Publish Dialog="MaintenanceTypeDlg" Control="RepairButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+      <Publish Dialog="MaintenanceTypeDlg" Control="RemoveButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+      <Publish Dialog="MaintenanceTypeDlg" Control="Back" Event="NewDialog" Value="MaintenanceWelcomeDlg">1</Publish>
+      
+      
+      
+    </UI>
+
+	</Product>
+
+  
+  
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="GetBeamFolder" Name="GetBeam.co" >
+          <Directory Id="INSTALLFOLDER" Name="BackgroundTracking" >            
+            <Component Id="MainExecutable"  Guid="804D30C2-28BE-423F-97C2-59BD9AE683CF">
+              <File Id="Executable1" Source="$(var.procrastitracker.TargetPath)" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="concrt140DLL"  Guid="{5E7ED029-091E-48F7-B34F-825C720CF156}">
+              <File Id="concrt140DLL1" Source="$(var.procrastitracker.TargetDir)concrt140.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="concrt140dDLL"  Guid="{D9078A15-C290-4DCF-9746-0DEEAD3BACBB}">
+              <File Id="concrt140dDLL1" Source="$(var.procrastitracker.TargetDir)concrt140d.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="cpprest140d_2_9DLL"  Guid="{A3FAADEF-72D8-483C-92A7-68D65F79EA57}">
+              <File Id="cpprest140d_2_9DLL1" Source="$(var.procrastitracker.TargetDir)cpprest140d_2_9.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="cpprest140_2_9DLL"  Guid="{CB0701D9-E7DB-4832-81E4-FB024065191E}">
+              <File Id="cpprest140_2_9DLL1" Source="$(var.procrastitracker.TargetDir)cpprest140_2_9.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="msvcp140DLL"  Guid="{AFED95E8-A2D8-4A7F-87D0-1B6CE562388D}">
+              <File Id="msvcp140DLL1" Source="$(var.procrastitracker.TargetDir)msvcp140.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="msvcp140dDLL"  Guid="{084D73F2-70FB-44D0-90AF-16B7C4B2D827}">
+              <File Id="msvcp140dDLL1" Source="$(var.procrastitracker.TargetDir)msvcp140d.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="procrastitrackerIOBJ"  Guid="{84F266A5-9B85-449F-BE44-46053D15D221}">
+              <File Id="procrastitrackerIOBJ1" Source="$(var.procrastitracker.TargetDir)procrastitracker.iobj" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="procrastitrackerIPDB"  Guid="{6C6E4849-9919-4EE4-8050-FB7322AC63B1}">
+              <File Id="procrastitrackerIPDB1" Source="$(var.procrastitracker.TargetDir)procrastitracker.ipdb" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="ucrtbasedDLL"  Guid="{BFADD70B-4BA3-4FBE-8FA1-21265AA9056B}">
+              <File Id="ucrtbasedDLL1" Source="$(var.procrastitracker.TargetDir)ucrtbased.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="vcruntime140DLL"  Guid="{892051CE-D6BC-4F68-BAB8-C14C90CDD0DA}">
+              <File Id="vcruntime140DLL1" Source="$(var.procrastitracker.TargetDir)vcruntime140.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="vcruntime140dDLL"  Guid="{A605FC9C-1802-46BC-B301-21CB3FD1192B}">
+              <File Id="vcruntime140dDLL1" Source="$(var.procrastitracker.TargetDir)vcruntime140d.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="wastorageDLL"  Guid="{9BF61CE7-4269-45A8-B2BD-D02A3EFCB1E8}">
+              <File Id="wastorageDLL1" Source="$(var.procrastitracker.TargetDir)wastorage.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+             
+          </Directory>
+        </Directory>
+			</Directory>
+      <Directory Id="AppDataFolder" Name="AppData">
+        <Directory Id="MyAppDirectory" Name="procrastitrackerdbs">
+          <Component Id="DatabaseFolderCreate" Guid="{8BDE114F-FAC4-4135-B08B-78600210D14E}" SharedDllRefCount="no" KeyPath="no" NeverOverwrite="no" Permanent="no" Transitive="no" Win64="no" Location="either">
+            <CreateFolder/>
+            <RemoveFolder Id="RemoveMyAppDirectory" On="uninstall" />
+            <RegistryKey Root="HKCU" Key="Software\Getbeam.co\BackgroundTracking">
+              <RegistryValue Name="APPDirectory" Value="1" KeyPath="yes" Type="integer" />
+            </RegistryKey>            
+          </Component>
+          <Component Id="WIXInstallerBackgroundTrackingInitializerEXE"  Guid="{1F614257-77C2-4E7A-9D84-181D27028027}">
+            <File Id="WIXInstallerBackgroundTrackingInitializerEXE1" Name="$(var.WIXInstallerBackgroundTrackingInitializer.TargetFileName)" Source="$(var.WIXInstallerBackgroundTrackingInitializer.TargetPath)" DiskId="1" Checksum="yes" />
+            <RegistryKey Root="HKCU" Key="Software\Getbeam.co\BackgroundTracking">
+              <RegistryValue Name="WIXInstallerBackgroundTrackingInitializerEXE" Value="1" KeyPath="yes" Type="integer" />
+            </RegistryKey>            
+          </Component>
+          <Component Id="SQLiteInitializerDLL"  Guid="{3ADDB4D8-AE2A-401C-B718-A754454E59EF}">
+            <File Id="SQLiteInitializerDLL1" Source="$(var.WIXInstallerBackgroundTrackingInitializer.TargetDir)System.Data.SQLite.dll" DiskId="1" Checksum="yes"  />
+            <RegistryKey Root="HKCU" Key="Software\Getbeam.co\BackgroundTracking">
+              <RegistryValue Name="SQLiteInitializerDLL" Value="1" KeyPath="yes" Type="integer" />
+            </RegistryKey>
+          </Component>
+          <Component Id="NewtonsoftJsonInitializerDLL"  Guid="{85DD505F-493F-418C-A57F-D772D58BE57B}">
+            <File Id="NewtonsoftJsonInitializerDLL1" Source="$(var.WIXInstallerBackgroundTrackingInitializer.TargetDir)Newtonsoft.Json.dll" DiskId="1" Checksum="yes"  />
+            <RegistryKey Root="HKCU" Key="Software\Getbeam.co\BackgroundTracking">
+              <RegistryValue Name="NewtonsoftJsonInitializerDLL" Value="1" KeyPath="yes" Type="integer" />
+            </RegistryKey>
+          </Component>
+          <Component Id="SQLiteInteropInitializerDLL"  Guid="{0DEBF647-2169-4EB9-89BC-15A5D23AD1B4}">
+            <File Id="SQLiteInteropInitializerDLL1" Source="$(var.WIXInstallerBackgroundTrackingInitializer.TargetDir)x86\SQLite.Interop.dll" DiskId="1" Checksum="yes"  />
+            <RegistryKey Root="HKCU" Key="Software\Getbeam.co\BackgroundTracking">
+              <RegistryValue Name="SQLiteInteropInitializerDLL" Value="1" KeyPath="yes" Type="integer" />
+            </RegistryKey>
+          </Component>
+          <Component Id="WIXInstallerBackgroundTrackingModelsInitializerDLL"  Guid="{AE402BA3-7466-4D4D-8A3D-684EE762A6D9}">
+            <File Id="WIXInstallerBackgroundTrackingModelsInitializerDLL1" Source="$(var.WIXInstallerBackgroundTrackingInitializer.TargetDir)WIXInstallerBackgroundTrackingModels.dll" DiskId="1" Checksum="yes"  />
+            <RegistryKey Root="HKCU" Key="Software\Getbeam.co\BackgroundTracking">
+              <RegistryValue Name="WIXInstallerBackgroundTrackingModelsInitializerDLL" Value="1" KeyPath="yes" Type="integer" />
+            </RegistryKey>
+          </Component>
+        </Directory>
+      </Directory>
+		</Directory>
+	</Fragment>
+  
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			<!-- <Component Id="ProductComponent"> -->
+				<!-- TODO: Insert files, registry keys, and other resources here. -->       
+      
+			<!-- </Component> -->
+		</ComponentGroup>
+	</Fragment>
+</Wix>

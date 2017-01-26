@@ -1,0 +1,10 @@
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\BackgroundTrackingCustomActions\bin\Debug\BackgroundTrackingCustomActions.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\BackgroundTrackingCustomActions\bin\Debug\BackgroundTrackingCustomActions.CA.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\BackgroundTrackingCustomActions\bin\Debug\BackgroundTrackingCustomActions.pdb
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\BackgroundTrackingCustomActions\bin\Debug\Microsoft.Deployment.WindowsInstaller.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\BackgroundTrackingCustomActions\bin\Debug\Microsoft.Deployment.WindowsInstaller.xml
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\BackgroundTrackingCustomActions\obj\x86\Debug\BackgroundTrackingCustomActions.csprojResolveAssemblyReference.cache
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\BackgroundTrackingCustomActions\obj\x86\Debug\BackgroundTrackingCustomActions.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\BackgroundTrackingCustomActions\obj\x86\Debug\BackgroundTrackingCustomActions.pdb
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\BackgroundTrackingCustomActions\bin\Debug\System.Data.SQLite.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\BackgroundTrackingCustomActions\bin\Debug\System.Data.SQLite.xml

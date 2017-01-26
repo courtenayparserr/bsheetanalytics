@@ -1,0 +1,9 @@
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingModesl\bin\Debug\WIXInstallerBackgroundTrackingModels.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingModesl\bin\Debug\WIXInstallerBackgroundTrackingModels.pdb
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingModesl\obj\Debug\WIXInstallerBackgroundTrackingModels.dll
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingModesl\obj\Debug\WIXInstallerBackgroundTrackingModels.pdb
+D:\Google Drive\Projects\Pet Heaven\Code\GetBeam.co\WIXInstallerBackgroundTrackingModesl\obj\Debug\WIXInstallerBackgroundTrackingModels.csprojResolveAssemblyReference.cache
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingModesl\bin\Debug\WIXInstallerBackgroundTrackingModels.dll
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingModesl\bin\Debug\WIXInstallerBackgroundTrackingModels.pdb
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingModesl\obj\Debug\WIXInstallerBackgroundTrackingModels.dll
+C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingModesl\obj\Debug\WIXInstallerBackgroundTrackingModels.pdb
