@@ -1,0 +1,7 @@
+obj\Debug\Product.wixobj
+C:\projects\bsheet.ana\Basic\bin\Debug\cab1.cab
+C:\projects\bsheet.ana\Basic\bin\Debug\Basic.msi
+C:\projects\bsheet.ana\Basic\bin\Debug\Basic.wixpdb
+obj\Debug\Basic.wixproj.BindContentsFileListnull.txt
+obj\Debug\Basic.wixproj.BindOutputsFileListnull.txt
+obj\Debug\Basic.wixproj.BindBuiltOutputsFileListnull.txt

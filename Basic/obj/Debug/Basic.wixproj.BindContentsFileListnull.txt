@@ -1,0 +1,13 @@
+C:\projects\bsheet.ana\PT\concrt140d.dll
+C:\projects\bsheet.ana\PT\concrt140.dll
+C:\projects\bsheet.ana\PT\cpprest140_2_9.dll
+C:\projects\bsheet.ana\PT\cpprest140d_2_9.dll
+C:\projects\bsheet.ana\PT\procrastitracker.exe
+C:\projects\bsheet.ana\PT\msvcp140d.dll
+C:\projects\bsheet.ana\PT\msvcp140.dll
+C:\projects\bsheet.ana\PT\procrastitracker.iobj
+C:\projects\bsheet.ana\PT\procrastitracker.ipdb
+C:\projects\bsheet.ana\PT\ucrtbased.dll
+C:\projects\bsheet.ana\PT\vcruntime140d.dll
+C:\projects\bsheet.ana\PT\vcruntime140.dll
+C:\projects\bsheet.ana\PT\wastorage.dll

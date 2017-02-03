@@ -49,27 +49,7 @@
       <ComponentRef Id="WIXInstallerBackgroundTrackingModelsInitializerDLL" />
 
     </Feature>
-  
-    <!--<Feature Id='Complete' Title='Background tracking' Description='The complete package.'
-      Display='expand' Level='0' ConfigurableDirectory='INSTALLFOLDER'>
-      <Feature Id='MainProgram' Title='Program' Description='The main executable.' Level='0'>
-        <ComponentRef Id="MainExecutable" />
-        <ComponentRef Id="EntityFrameworkDLL" />
-        <ComponentRef Id="NDdeDLL" />
-        <ComponentRef Id="SQLiteDLL" />
-        <ComponentRef Id="SQLiteEF6DLL" />
-        <ComponentRef Id="SQLiteLINQDLL" />
-        <ComponentRef Id="TaskDataflowDLL" />   
-      </Feature>
-
-    </Feature>-->
-    
-    
-    
-  
-    <!--<UIRef Id="MyWixUI_Mondo" />
-    <UIRef Id="WixUI_ErrorProgressText" />-->
-    
+      
     <UI Id="MyUIDialogs">
       
       <TextStyle Id="WixUI_Font_Normal" FaceName="Tahoma" Size="8" />

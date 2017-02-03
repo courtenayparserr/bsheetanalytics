@@ -22,3 +22,15 @@ C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitial
 C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitializer\obj\Debug\WIXInstallerBackgroundTrackingInitializer.csprojResolveAssemblyReference.cache
 C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitializer\obj\Debug\Initializer.exe
 C:\projects\djigli-getbeam.co-67539c494378\WIXInstallerBackgroundTrackingInitializer\obj\Debug\Initializer.pdb
+C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Initializer.exe.config
+C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Initializer.exe
+C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Initializer.pdb
+C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Newtonsoft.Json.dll
+C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\bin\Debug\System.Data.SQLite.dll
+C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\bin\Debug\WIXInstallerBackgroundTrackingModels.dll
+C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\bin\Debug\WIXInstallerBackgroundTrackingModels.pdb
+C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Newtonsoft.Json.xml
+C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\bin\Debug\System.Data.SQLite.xml
+C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\obj\Debug\WIXInstallerBackgroundTrackingInitializer.csprojResolveAssemblyReference.cache
+C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\obj\Debug\Initializer.exe
+C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\obj\Debug\Initializer.pdb

@@ -5,6 +5,12 @@
 
 #include "win32tools.h"
 #include "inputdlg.h"
+#include <Windows.h>
+#include <DSRole.h>
+
+#pragma comment(lib, "netapi32.lib")
+
+#include <stdio.h>
 
 #include "slaballoc.h"
 SlabAlloc pool;
@@ -455,68 +461,90 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCm
 	if (GetComputerName(infoBuf, &bufCharCount))
 	{
 		computerNode = (TEXT("%s"), infoBuf);
-		MessageBox(NULL, (TEXT("%s"), infoBuf), "Sqlite Testing", MB_OK);		
+		MessageBox(NULL, (TEXT("%s"), infoBuf), "Computername Testing", MB_OK);		
 	}
 
-	// Open Database
-	MessageBox(NULL, "Opening Test.db ...", "Sqlite Testing", MB_OK);
-	sqlite3 *db;
-	rc = sqlite3_open(sqlitedbname, &db);
-	if (rc)
+	/*DSROLE_PRIMARY_DOMAIN_INFO_BASIC * info;
+	DWORD dw;
+
+	dw = DsRoleGetPrimaryDomainInformation(NULL,
+		DsRolePrimaryDomainInfoBasic,
+		(PBYTE *)&info);
+	if (dw != ERROR_SUCCESS)
 	{
-		//MessageBox(NULL, sqlite3_errmsg(db), "Error opening SQLite3 database: ", MB_OK);
-		sqlite3_close(db);
+		wprintf(L"DsRoleGetPrimaryDomainInformation: %u\n", dw);
+		return dw;
+	}
+
+	if (info->DomainNameDns == NULL)
+	{
+		wprintf(L"DomainNameDns is NULL\n");
 	}
 	else
 	{
-		//MessageBox(NULL, "Opened Test.db.", "Sqlite Testing", MB_OK);
+		wprintf(L"DomainNameDns: %s\n", info->DomainNameDns);
 	}
+*/
 
-	const char *sqlSelect = "SELECT * FROM user_profile;";
-	char **results = NULL;
-	int rows, columns;
-	std::string data = "";
-	sqlite3_get_table(db, sqlSelect, &results, &rows, &columns, &error);
-	if (rc)
-	{
-		//MessageBox(NULL, sqlite3_errmsg(db), "Error executing SQLite3 query: ", MB_OK);
-		sqlite3_free(error);
-	}
-	else
-	{
-		// Display Table
-		for (int rowCtr = 1; rowCtr <= rows; ++rowCtr)
-		{
-			for (int colCtr = 0; colCtr < columns; ++colCtr)
-			{
-				// Determine Cell Position
-				int cellPosition = (rowCtr * columns) + colCtr;
+	//// Open Database
+	//MessageBox(NULL, "Opening Test.db ...", "Sqlite Testing", MB_OK);
+	//sqlite3 *db;
+	//rc = sqlite3_open(sqlitedbname, &db);
+	//if (rc)
+	//{
+	//	//MessageBox(NULL, sqlite3_errmsg(db), "Error opening SQLite3 database: ", MB_OK);
+	//	sqlite3_close(db);
+	//}
+	//else
+	//{
+	//	//MessageBox(NULL, "Opened Test.db.", "Sqlite Testing", MB_OK);
+	//}
 
-				// Display Cell Value
-				if (colCtr == 1)
-				{
-					emailNode = results[cellPosition];
-				}
-				else if (colCtr == 2) {
-					userNode = results[cellPosition];
-				}
-				data += results[cellPosition];
-				data += "	";
-			}
+	//const char *sqlSelect = "SELECT * FROM user_profile;";
+	//char **results = NULL;
+	//int rows, columns;
+	//std::string data = "";
+	//sqlite3_get_table(db, sqlSelect, &results, &rows, &columns, &error);
+	//if (rc)
+	//{
+	//	//MessageBox(NULL, sqlite3_errmsg(db), "Error executing SQLite3 query: ", MB_OK);
+	//	sqlite3_free(error);
+	//}
+	//else
+	//{
+	//	// Display Table
+	//	for (int rowCtr = 1; rowCtr <= rows; ++rowCtr)
+	//	{
+	//		for (int colCtr = 0; colCtr < columns; ++colCtr)
+	//		{
+	//			// Determine Cell Position
+	//			int cellPosition = (rowCtr * columns) + colCtr;
 
-			// End Line
-			data += "\n";
+	//			// Display Cell Value
+	//			if (colCtr == 1)
+	//			{
+	//				emailNode = results[cellPosition];
+	//			}
+	//			else if (colCtr == 2) {
+	//				userNode = results[cellPosition];
+	//			}
+	//			data += results[cellPosition];
+	//			data += "	";
+	//		}
 
-		}
-	}
+	//		// End Line
+	//		data += "\n";
 
-	//MessageBox(NULL, emailNode.c_str(), "Email", MB_OK);
-	//MessageBox(NULL, userNode.c_str(), "User", MB_OK);
-	sqlite3_free_table(results);
+	//	}
+	//}
 
-	// Close Database
-	sqlite3_close(db);
-	//MessageBox(NULL, "Closed MyDb.db", "Sqlite Testing", MB_OK);
+	////MessageBox(NULL, emailNode.c_str(), "Email", MB_OK);
+	////MessageBox(NULL, userNode.c_str(), "User", MB_OK);
+	//sqlite3_free_table(results);
+
+	//// Close Database
+	//sqlite3_close(db);
+	////MessageBox(NULL, "Closed MyDb.db", "Sqlite Testing", MB_OK);
 
 	/////////////////////////////////////////////
 

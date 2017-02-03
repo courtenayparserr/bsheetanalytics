@@ -1,0 +1,3 @@
+C:\projects\bsheet.ana\Basic\bin\Debug\cab1.cab
+C:\projects\bsheet.ana\Basic\bin\Debug\Basic.msi
+C:\projects\bsheet.ana\Basic\bin\Debug\Basic.wixpdb
