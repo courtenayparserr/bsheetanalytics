@@ -97,7 +97,7 @@ void load(node *root, char *fn, bool merge) {
 void exporthtml(char *fn) {
     FILE *f = fopen(fn, "w");
     if (f) {
-        fprintf(f, "<HTML><HEAD><TITLE>Procrastitracker export</TITLE></HEAD><BODY>");
+        fprintf(f, "<HTML><HEAD><TITLE>balancesheet export</TITLE></HEAD><BODY>");
         root->print(f, true);
         fprintf(f, "</BODY></HTML>");
         fclose(f);
@@ -189,7 +189,7 @@ void send(utility::string_t msg) {
 	queue.create_if_not_exists();
 
 	// Create a message and add it to the queue.
-	//azure::storage::cloud_queue_message message(U("[{\"url\":\"https://www.google.com.au/search?q=c%2B%2B+user32.dll+time+tracking+app&oq=c%2B%2B+user32.dll+time+tracking+app&aqs=chrome..69i57.5932j0j8&sourceid=chrome&ie=UTF-8#q=c+user32.dll+time+tracking+app+github\",\"app\":null,\"email\":\"jv@vip.ie\",\"dbId\":\"323e3098-cc87-4b37-8eb5-85a6d6ddba1c\",\"seconds\":147.0490574,\"date\":\"2016-11-17T00:00:00+11:00\"},{\"url\":\"strlen.com/procrastitracker/\",\"app\":null,\"email\":\"jv@vip.ie\",\"dbId\":\"323e3098-cc87-4b37-8eb5-85a6d6ddba1c\",\"seconds\":69.1641007,\"date\":\"2016-11-17T00:00:00+11:00\"},{\"url\":\"TimeTracking\",\"app\":null,\"email\":\"jv@vip.ie\",\"dbId\":\"323e3098-cc87-4b37-8eb5-85a6d6ddba1c\",\"seconds\":2.076,\"date\":\"2016-11-17T00:00:00+11:00\"},{\"url\":\"https://github.com/aardappel/procrastitracker\",\"app\":null,\"email\":\"jv@vip.ie\",\"dbId\":\"323e3098-cc87-4b37-8eb5-85a6d6ddba1c\",\"seconds\":2.0318743,\"date\":\"2016-11-17T00:00:00+11:00\"},{\"url\":\"zh\",\"app\":null,\"email\":\"jv@vip.ie\",\"dbId\":\"323e3098-cc87-4b37-8eb5-85a6d6ddba1c\",\"seconds\":1.03,\"date\":\"2016-11-17T00:00:00+11:00\"}]"));
+	//azure::storage::cloud_queue_message message(U("[{\"url\":\"https://www.google.com.au/search?q=c%2B%2B+user32.dll+time+tracking+app&oq=c%2B%2B+user32.dll+time+tracking+app&aqs=chrome..69i57.5932j0j8&sourceid=chrome&ie=UTF-8#q=c+user32.dll+time+tracking+app+github\",\"app\":null,\"email\":\"jv@vip.ie\",\"dbId\":\"323e3098-cc87-4b37-8eb5-85a6d6ddba1c\",\"seconds\":147.0490574,\"date\":\"2016-11-17T00:00:00+11:00\"},{\"url\":\"strlen.com/balancesheet/\",\"app\":null,\"email\":\"jv@vip.ie\",\"dbId\":\"323e3098-cc87-4b37-8eb5-85a6d6ddba1c\",\"seconds\":69.1641007,\"date\":\"2016-11-17T00:00:00+11:00\"},{\"url\":\"TimeTracking\",\"app\":null,\"email\":\"jv@vip.ie\",\"dbId\":\"323e3098-cc87-4b37-8eb5-85a6d6ddba1c\",\"seconds\":2.076,\"date\":\"2016-11-17T00:00:00+11:00\"},{\"url\":\"https://github.com/aardappel/balancesheet\",\"app\":null,\"email\":\"jv@vip.ie\",\"dbId\":\"323e3098-cc87-4b37-8eb5-85a6d6ddba1c\",\"seconds\":2.0318743,\"date\":\"2016-11-17T00:00:00+11:00\"},{\"url\":\"zh\",\"app\":null,\"email\":\"jv@vip.ie\",\"dbId\":\"323e3098-cc87-4b37-8eb5-85a6d6ddba1c\",\"seconds\":1.03,\"date\":\"2016-11-17T00:00:00+11:00\"}]"));
 	azure::storage::cloud_queue_message message(msg);
 	queue.add_message(message);
 

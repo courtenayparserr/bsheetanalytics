@@ -1,6 +1,6 @@
-procrastitracker/Release
-procrastitracker/Debug
-PT/procrastitracker.exe
+balancesheet/Release
+balancesheet/Debug
+PT/balancesheet.exe
 ipch/
 *.pdb
 *.ncb
@@ -10,6 +10,6 @@ ipch/
 *.sdf
 *.opensdf
 *.aps
-/ProcrastiTracker_Setup.exe
+/balancesheet_Setup.exe
 *.bak
-procrastitracker/packages
+balancesheet/packages

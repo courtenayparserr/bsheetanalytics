@@ -1,14 +1,14 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by procrastitracker.rc
+// Used by balancesheet.rc
 //
 #define IDC_MYICON                      2
-#define IDD_PROCRASTITRACKER_DIALOG     102
+#define IDD_balancesheet_DIALOG     102
 #define IDD_AWAYDIALOG                  102
 #define IDD_ABOUTBOX                    103
 #define IDM_ABOUT                       104
 #define IDD_PROPPAGE_MEDIUM             106
-#define IDI_PROCRASTITRACKER            107
+#define IDI_balancesheet            107
 #define IDD_PROPPAGE_LARGE              107
 #define IDR_MAINFRAME                   128
 #define IDR_RT_MANIFEST1                129

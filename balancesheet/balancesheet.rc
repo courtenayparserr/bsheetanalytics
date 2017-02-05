@@ -28,7 +28,7 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_PROCRASTITRACKER    ICON                    "procrastitracker.ico"
+IDI_balancesheet    ICON                    "balancesheet.ico"
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -41,10 +41,10 @@ STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_CAPTION | WS_SYSMENU
 CAPTION "About"
 FONT 8, "Trebuchet MS", 400, 0, 0x0
 BEGIN
-    LTEXT           "ProcrastiTracker Version Mmm 00 0000",IDC_STATIC1,8,4,133,8,SS_NOPREFIX
+    LTEXT           "balancesheet Version Mmm 00 0000",IDC_STATIC1,8,4,133,8,SS_NOPREFIX
     LTEXT           "by Wouter van Oortmerssen",IDC_STATIC,8,13,101,8
     DEFPUSHBUTTON   "OK",IDOK,8,33,30,11,WS_GROUP
-    LTEXT           "http://procrastitracker.com/",IDC_STATIC,8,22,101,8
+    LTEXT           "http://balancesheet.com/",IDC_STATIC,8,22,101,8
 END
 
 IDD_PROPPAGE_LARGE DIALOGEX 0, 0, 541, 380
@@ -96,7 +96,7 @@ END
 
 IDD_AWAYDIALOG DIALOGEX 0, 0, 267, 195
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "ProcrastiTracker away time"
+CAPTION "balancesheet away time"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     LTEXT           "You were away for 5 minutes, what was your primary activity?",IDC_STATIC,7,7,253,23

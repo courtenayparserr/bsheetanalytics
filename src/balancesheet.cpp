@@ -25,7 +25,7 @@ StringPool strpool;
 
 DWORD mainthreadid = 0;
 
-void warn(char *what) { MessageBoxA(NULL, what, "procrastitracker", MB_OK); }
+void warn(char *what) { MessageBoxA(NULL, what, "balancesheet", MB_OK); }
 
 void panic(char *what) {
     warn(what);
@@ -100,9 +100,9 @@ void PANIC() {
     }
     MessageBoxA(
         NULL,
-        "The database is corrupt. Please restore the last backup (ProcrastiTracker makes these "
+        "The database is corrupt. Please restore the last backup (balancesheet makes these "
         "frequently), "
-        "and try again. See Procrastitracker start menu for database location. Exiting program..",
+        "and try again. See balancesheet start menu for database location. Exiting program..",
         "DB problem", 0);
     exit(1);
 }
@@ -207,8 +207,8 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam) {
     switch (message) {
         case WM_INITDIALOG:
             SendMessageA(hDlg, WM_SETICON, 0,
-                         (LPARAM)LoadIcon(hInst, MAKEINTRESOURCE(IDI_PROCRASTITRACKER)));
-            SetWindowTextA(GetDlgItem(hDlg, IDC_STATIC1), "ProcrastiTracker Version " __DATE__);
+                         (LPARAM)LoadIcon(hInst, MAKEINTRESOURCE(IDI_balancesheet)));
+            SetWindowTextA(GetDlgItem(hDlg, IDC_STATIC1), "balancesheet Version " __DATE__);
             return (INT_PTR)TRUE;
 
         case WM_COMMAND:
@@ -230,8 +230,8 @@ bool CreateTaskBarIcon(HWND hWnd, DWORD action) {
     nid.hWnd = hWnd;
     nid.uFlags = NIF_ICON | NIF_MESSAGE | NIF_TIP;
     nid.uCallbackMessage = WM_USER + 1;
-    nid.hIcon = LoadIcon(hInst, MAKEINTRESOURCE(IDI_PROCRASTITRACKER));
-    strcpy(nid.szTip, "procrastitracker (active)");  // max 64 chars
+    nid.hIcon = LoadIcon(hInst, MAKEINTRESOURCE(IDI_balancesheet));
+    strcpy(nid.szTip, "balancesheet (active)");  // max 64 chars
     loop(i, action == NIM_DELETE ? 2 : 60) {
         if (Shell_NotifyIcon(action, &nid)) return true;
         Sleep(1000);
@@ -277,7 +277,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
                     recompaccum();
                     char requestfilename[1000];
                     if (FileRequest(hWnd, requestfilename, sizeof(requestfilename),
-                                    "procrastitracker_report.html",
+                                    "balancesheet_report.html",
                                     "HTML Files\0*.html;*.htm\0All Files\0*.*\0\0",
                                     "Save Exported HTML File As..."))
                         exporthtml(requestfilename);
@@ -288,7 +288,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
                     char requestfilename[1000];
                     if (FileRequest(hWnd, requestfilename, sizeof(requestfilename),
                                     "exported_view.PT",
-                                    "ProcrastiTracker Database Files\0*.PT\0All Files\0*.*\0\0",
+                                    "balancesheet Database Files\0*.PT\0All Files\0*.*\0\0",
                                     "Save Exported Database View As..."))
                         save(true, requestfilename);
                     break;
@@ -297,7 +297,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
                     char requestfilename[100000];  // Must fit many filenames.
                     if (FileRequest(hWnd, requestfilename, sizeof(requestfilename),
                                     "db_fromothercomputer.PT",
-                                    "ProcrastiTracker Database Files\0*.PT\0All Files\0*.*\0\0",
+                                    "balancesheet Database Files\0*.PT\0All Files\0*.*\0\0",
                                     "Merge Database File Into Current Database...")) {
                         String dir(requestfilename);
                         char *it = requestfilename + dir.Len() + 1;
@@ -382,7 +382,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCm
                                     ICC_STANDARD_CLASSES | ICC_TREEVIEW_CLASSES |
                                     ICC_USEREX_CLASSES | ICC_WIN95_CLASSES};
     InitCommonControlsEx(&icc);
-    if (FindWindowA("PROCRASTITRACKER", NULL)) panic("ProcrastiTracker already running");
+    if (FindWindowA("balancesheet", NULL)) panic("balancesheet already running");
     if (!ddeinit()) panic("PT: Cannot initialize DDE");
     // This is for chrome only:
     eventhookinit();
@@ -393,17 +393,17 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCm
     wcex.cbClsExtra = 0;
     wcex.cbWndExtra = 0;
     wcex.hInstance = hInstance;
-    wcex.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_PROCRASTITRACKER));
+    wcex.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_balancesheet));
     wcex.hCursor = LoadCursor(NULL, IDC_ARROW);
     wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
-    wcex.lpszMenuName = NULL;  // MAKEINTRESOURCE(IDC_PROCRASTITRACKER);
-    wcex.lpszClassName = "PROCRASTITRACKER";
-    wcex.hIconSm = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_PROCRASTITRACKER));
+    wcex.lpszMenuName = NULL;  // MAKEINTRESOURCE(IDC_balancesheet);
+    wcex.lpszClassName = "balancesheet";
+    wcex.hIconSm = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_balancesheet));
     RegisterClassEx(&wcex);
     hInst = hInstance;
     whitebrush = CreateSolidBrush(0xFFFFFF);
     greybrush = CreateSolidBrush(0xb99d7f);
-    mainhwnd = CreateWindow("PROCRASTITRACKER", "procrastitracker", WS_OVERLAPPEDWINDOW,
+    mainhwnd = CreateWindow("balancesheet", "balancesheet", WS_OVERLAPPEDWINDOW,
                             CW_USEDEFAULT, 0, 300, 150, NULL, NULL, hInstance, NULL);
     if (!mainhwnd) panic("PT: Cannot create main window");
     if ((WM_TASKBARCREATED = RegisterWindowMessage(TEXT("TaskbarCreated"))) == 0)
@@ -417,7 +417,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCm
         // should not happen, but if it does, databases will just end up in current dir
         databaseroot[0] = 0;
     }
-    PathAppend(databaseroot, "procrastitrackerdbs\\");
+    PathAppend(databaseroot, "balancesheetdbs\\");
     SHCreateDirectoryEx(NULL, databaseroot, NULL);
     strcpy(databasemain, databaseroot);
     strcpy(databaseback, databaseroot);

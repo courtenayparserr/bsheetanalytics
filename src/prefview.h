@@ -4,7 +4,7 @@ INT_PTR CALLBACK Prefs(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam) {
     switch (message) {
         case WM_INITDIALOG: {
             SendMessageA(hDlg, WM_SETICON, 0,
-                         (LPARAM)LoadIcon(hInst, MAKEINTRESOURCE(IDI_PROCRASTITRACKER)));
+                         (LPARAM)LoadIcon(hInst, MAKEINTRESOURCE(IDI_balancesheet)));
             loop(i, NUM_PREFS) prefs[i].seteditbox(hDlg);
             return (INT_PTR)TRUE;
         }

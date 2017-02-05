@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WIXInstallerBackgroundTrack
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WIXInstallerBackgroundTrackingInitializer", "WIXInstallerBackgroundTrackingInitializer\WIXInstallerBackgroundTrackingInitializer.csproj", "{D875002A-8757-4CC2-B651-845633302C38}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "procrastitracker", "procrastitracker\procrastitracker.vcxproj", "{D4331D8B-5F63-4D37-8E4A-7D6D1E6934DF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "balancesheet", "balancesheet\balancesheet.vcxproj", "{D4331D8B-5F63-4D37-8E4A-7D6D1E6934DF}"
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Basic", "Basic\Basic.wixproj", "{7C5A3EED-780C-4949-A712-411D5FC17B95}"
 EndProject

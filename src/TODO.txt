@@ -49,7 +49,7 @@ You can reuse some of the other 7 for projects as well, but yeah, more would be 
 
 3. The ability to delete items from the log;
 
-You can hide (see keyboard shortcuts on http://strlen.com/procrastitracker/ ). You can also merge into the parent which can have the effect of delete.
+You can hide (see keyboard shortcuts on http://strlen.com/balancesheet/ ). You can also merge into the parent which can have the effect of delete.
 
 4. The ability to exclude certain activities from being tracked; and
 
@@ -71,7 +71,7 @@ I see there痴 a feature for merging in an external database. I think it could be
 
 Let me explain what I mean with a hypothetical example:
 
-I知 considering starting a small indie game studio with 3 friends. We all have different amounts of time we can spend on creating the games, so we are trying to figure out a fair system for sharing the massive profits we値l make depending on who put the most actual work in to creating the game. We can use procrastitracker to figure out exactly how much work each person has done.
+I知 considering starting a small indie game studio with 3 friends. We all have different amounts of time we can spend on creating the games, so we are trying to figure out a fair system for sharing the massive profits we値l make depending on who put the most actual work in to creating the game. We can use balancesheet to figure out exactly how much work each person has done.
 
 
 
@@ -92,13 +92,13 @@ I知 considering starting a small indie game studio with 3 friends. We all have d
   popup often just sits there re-popping up even if I don't touch the controls every 20 secs or so
 
 add to this page: http://en.wikipedia.org/wiki/Comparison_of_time_tracking_software
-| [[ProcrastiTracker]]
+| [[balancesheet]]
 | [[Microsoft Windows]]
 | Automatic time tracking (by active window). Hierarchical (organized by exe/url/title components) with tagging/searching/filtering features. Graphs by topic and by day. Written to use minimize memory/CPU usage.
 | Exports to HTML.
 | Custom local database (mergable / migratable).
 | [[Freeware]]
--> make ProcrastiTracker wiki page if link persists
+-> make balancesheet wiki page if link persists
 -> was removed, for either not having a page, or not being notable, or both. To have a page, presumably it also needs to be notable. Notable means it has plenty of external people referring to it, which may not be the case
 
 - seems like there's no examples anymore of misbehaving games since the change to LL mousehooks... maybe the hooks used to get killed on those games, either by the OS or the game?

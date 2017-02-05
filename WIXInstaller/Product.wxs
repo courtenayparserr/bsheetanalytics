@@ -14,7 +14,7 @@
     <CustomAction Id="CheckUserEmail"  Return="check" Execute="immediate" BinaryKey="WIXInstallerBackgroundTrackingCustomActions" DllEntry="CheckUserEmail" />
     <CustomAction Id="InitializeDatabase"  Return="check" Execute="immediate" Impersonate="yes" BinaryKey="WIXInstallerBackgroundTrackingCustomActions" DllEntry="InitializeDatabase" />
     
-    <CustomAction Id="LaunchApp" Directory="INSTALLFOLDER" ExeCommand="[SystemFolder]cmd.exe /C start $(var.procrastitracker.TargetFileName)" />
+    <CustomAction Id="LaunchApp" Directory="INSTALLFOLDER" ExeCommand="[SystemFolder]cmd.exe /C start $(var.balancesheet.TargetFileName)" />
 
     
     <InstallExecuteSequence>
@@ -32,8 +32,8 @@
       <ComponentRef Id="cpprest140_2_9DLL" />
       <ComponentRef Id="msvcp140DLL" />
       <ComponentRef Id="msvcp140dDLL" />
-      <ComponentRef Id="procrastitrackerIOBJ" />
-      <ComponentRef Id="procrastitrackerIPDB" />
+      <ComponentRef Id="balancesheetIOBJ" />
+      <ComponentRef Id="balancesheetIPDB" />
       <ComponentRef Id="ucrtbasedDLL" />
       <ComponentRef Id="vcruntime140DLL" />
       <ComponentRef Id="vcruntime140dDLL" />
@@ -119,50 +119,50 @@
 				<Directory Id="GetBeamFolder" Name="GetBeam.co" >
           <Directory Id="INSTALLFOLDER" Name="BackgroundTracking" >            
             <Component Id="MainExecutable"  Guid="804D30C2-28BE-423F-97C2-59BD9AE683CF">
-              <File Id="Executable1" Source="$(var.procrastitracker.TargetPath)" DiskId="1" KeyPath="yes" />
+              <File Id="Executable1" Source="$(var.balancesheet.TargetPath)" DiskId="1" KeyPath="yes" />
             </Component>
             <Component Id="concrt140DLL"  Guid="{5E7ED029-091E-48F7-B34F-825C720CF156}">
-              <File Id="concrt140DLL1" Source="$(var.procrastitracker.TargetDir)concrt140.dll" DiskId="1" KeyPath="yes" />
+              <File Id="concrt140DLL1" Source="$(var.balancesheet.TargetDir)concrt140.dll" DiskId="1" KeyPath="yes" />
             </Component>
             <Component Id="concrt140dDLL"  Guid="{D9078A15-C290-4DCF-9746-0DEEAD3BACBB}">
-              <File Id="concrt140dDLL1" Source="$(var.procrastitracker.TargetDir)concrt140d.dll" DiskId="1" KeyPath="yes" />
+              <File Id="concrt140dDLL1" Source="$(var.balancesheet.TargetDir)concrt140d.dll" DiskId="1" KeyPath="yes" />
             </Component>
             <Component Id="cpprest140d_2_9DLL"  Guid="{A3FAADEF-72D8-483C-92A7-68D65F79EA57}">
-              <File Id="cpprest140d_2_9DLL1" Source="$(var.procrastitracker.TargetDir)cpprest140d_2_9.dll" DiskId="1" KeyPath="yes" />
+              <File Id="cpprest140d_2_9DLL1" Source="$(var.balancesheet.TargetDir)cpprest140d_2_9.dll" DiskId="1" KeyPath="yes" />
             </Component>
             <Component Id="cpprest140_2_9DLL"  Guid="{CB0701D9-E7DB-4832-81E4-FB024065191E}">
-              <File Id="cpprest140_2_9DLL1" Source="$(var.procrastitracker.TargetDir)cpprest140_2_9.dll" DiskId="1" KeyPath="yes" />
+              <File Id="cpprest140_2_9DLL1" Source="$(var.balancesheet.TargetDir)cpprest140_2_9.dll" DiskId="1" KeyPath="yes" />
             </Component>
             <Component Id="msvcp140DLL"  Guid="{AFED95E8-A2D8-4A7F-87D0-1B6CE562388D}">
-              <File Id="msvcp140DLL1" Source="$(var.procrastitracker.TargetDir)msvcp140.dll" DiskId="1" KeyPath="yes" />
+              <File Id="msvcp140DLL1" Source="$(var.balancesheet.TargetDir)msvcp140.dll" DiskId="1" KeyPath="yes" />
             </Component>
             <Component Id="msvcp140dDLL"  Guid="{084D73F2-70FB-44D0-90AF-16B7C4B2D827}">
-              <File Id="msvcp140dDLL1" Source="$(var.procrastitracker.TargetDir)msvcp140d.dll" DiskId="1" KeyPath="yes" />
+              <File Id="msvcp140dDLL1" Source="$(var.balancesheet.TargetDir)msvcp140d.dll" DiskId="1" KeyPath="yes" />
             </Component>
-            <Component Id="procrastitrackerIOBJ"  Guid="{84F266A5-9B85-449F-BE44-46053D15D221}">
-              <File Id="procrastitrackerIOBJ1" Source="$(var.procrastitracker.TargetDir)procrastitracker.iobj" DiskId="1" KeyPath="yes" />
+            <Component Id="balancesheetIOBJ"  Guid="{84F266A5-9B85-449F-BE44-46053D15D221}">
+              <File Id="balancesheetIOBJ1" Source="$(var.balancesheet.TargetDir)balancesheet.iobj" DiskId="1" KeyPath="yes" />
             </Component>
-            <Component Id="procrastitrackerIPDB"  Guid="{6C6E4849-9919-4EE4-8050-FB7322AC63B1}">
-              <File Id="procrastitrackerIPDB1" Source="$(var.procrastitracker.TargetDir)procrastitracker.ipdb" DiskId="1" KeyPath="yes" />
+            <Component Id="balancesheetIPDB"  Guid="{6C6E4849-9919-4EE4-8050-FB7322AC63B1}">
+              <File Id="balancesheetIPDB1" Source="$(var.balancesheet.TargetDir)balancesheet.ipdb" DiskId="1" KeyPath="yes" />
             </Component>
             <Component Id="ucrtbasedDLL"  Guid="{BFADD70B-4BA3-4FBE-8FA1-21265AA9056B}">
-              <File Id="ucrtbasedDLL1" Source="$(var.procrastitracker.TargetDir)ucrtbased.dll" DiskId="1" KeyPath="yes" />
+              <File Id="ucrtbasedDLL1" Source="$(var.balancesheet.TargetDir)ucrtbased.dll" DiskId="1" KeyPath="yes" />
             </Component>
             <Component Id="vcruntime140DLL"  Guid="{892051CE-D6BC-4F68-BAB8-C14C90CDD0DA}">
-              <File Id="vcruntime140DLL1" Source="$(var.procrastitracker.TargetDir)vcruntime140.dll" DiskId="1" KeyPath="yes" />
+              <File Id="vcruntime140DLL1" Source="$(var.balancesheet.TargetDir)vcruntime140.dll" DiskId="1" KeyPath="yes" />
             </Component>
             <Component Id="vcruntime140dDLL"  Guid="{A605FC9C-1802-46BC-B301-21CB3FD1192B}">
-              <File Id="vcruntime140dDLL1" Source="$(var.procrastitracker.TargetDir)vcruntime140d.dll" DiskId="1" KeyPath="yes" />
+              <File Id="vcruntime140dDLL1" Source="$(var.balancesheet.TargetDir)vcruntime140d.dll" DiskId="1" KeyPath="yes" />
             </Component>
             <Component Id="wastorageDLL"  Guid="{9BF61CE7-4269-45A8-B2BD-D02A3EFCB1E8}">
-              <File Id="wastorageDLL1" Source="$(var.procrastitracker.TargetDir)wastorage.dll" DiskId="1" KeyPath="yes" />
+              <File Id="wastorageDLL1" Source="$(var.balancesheet.TargetDir)wastorage.dll" DiskId="1" KeyPath="yes" />
             </Component>
              
           </Directory>
         </Directory>
 			</Directory>
       <Directory Id="AppDataFolder" Name="AppData">
-        <Directory Id="MyAppDirectory" Name="procrastitrackerdbs">
+        <Directory Id="MyAppDirectory" Name="balancesheetdbs">
           <Component Id="DatabaseFolderCreate" Guid="{8BDE114F-FAC4-4135-B08B-78600210D14E}" SharedDllRefCount="no" KeyPath="no" NeverOverwrite="no" Permanent="no" Transitive="no" Win64="no" Location="either">
             <CreateFolder/>
             <RemoveFolder Id="RemoveMyAppDirectory" On="uninstall" />

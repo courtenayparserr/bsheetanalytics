@@ -83,7 +83,7 @@
     <ClCompile Include="..\src\stdafx.cpp">
       <Filter>std</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\procrastitracker.cpp">
+    <ClCompile Include="..\src\balancesheet.cpp">
       <Filter>app</Filter>
     </ClCompile>
     <ClCompile Include="..\src\inputdlg.cpp">
@@ -151,12 +151,12 @@
     <Image Include="procrast.ico">
       <Filter>resources</Filter>
     </Image>
-    <Image Include="procrastitracker.ico">
+    <Image Include="balancesheet.ico">
       <Filter>resources</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="procrastitracker.rc">
+    <ResourceCompile Include="balancesheet.rc">
       <Filter>resources</Filter>
     </ResourceCompile>
   </ItemGroup>

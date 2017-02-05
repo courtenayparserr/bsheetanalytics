@@ -86,7 +86,7 @@ bool inputhooksetup() {  // WINVER = 0x0501 for Windows XP, it needs non-NULL hI
                          // if there is a problem for some other version, try changing
                          // the 0x0501 to this version number, maybe it will help
                          // for VINVER < 0x0501  ICC_STANDARD_CLASSES  is undefined
-                         // in procrastitracker.cpp, so it cannot be used below Win XP
+                         // in balancesheet.cpp, so it cannot be used below Win XP
     #if WINVER <= 0x0501
         extern HINSTANCE hInst;
     #else
@@ -110,7 +110,7 @@ void reinstall_hooks() {
     DWORD lasttick = g_dwLastTick;
     inputhookcleanup();
     if (!inputhooksetup()) {
-        panic("PT: can't set keyboard/mouse hooks, please restart ProcrastiTracker");
+        panic("PT: can't set keyboard/mouse hooks, please restart balancesheet");
     }
     g_dwLastTick = lasttick;
 }

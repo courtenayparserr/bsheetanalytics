@@ -24,8 +24,8 @@
     <Compile Include="Product.wxs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\procrastitracker\procrastitracker.vcxproj">
-      <Name>procrastitracker</Name>
+    <ProjectReference Include="..\balancesheet\balancesheet.vcxproj">
+      <Name>balancesheet</Name>
       <Project>{d4331d8b-5f63-4d37-8e4a-7d6d1e6934df}</Project>
       <Private>True</Private>
       <DoNotHarvest>True</DoNotHarvest>

@@ -4,7 +4,7 @@ INT_PTR CALLBACK Away(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam) {
     switch (message) {
         case WM_INITDIALOG: {
             SendMessageA(hDlg, WM_SETICON, 0,
-                         (LPARAM)LoadIcon(hInst, MAKEINTRESOURCE(IDI_PROCRASTITRACKER)));
+                         (LPARAM)LoadIcon(hInst, MAKEINTRESOURCE(IDI_balancesheet)));
             HWND text = GetDlgItem(hDlg, IDC_STATIC);
             assert(text);
             char buf[100];

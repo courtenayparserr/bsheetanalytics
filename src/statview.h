@@ -341,7 +341,7 @@ INT_PTR CALLBACK Stats(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam) {
             SendMessageA(quickcombo, CB_ADDSTRING, 0, (LPARAM) "All Time");
             filterstr = GetDlgItem(hDlg, IDC_EDIT8);
             SendMessageA(hDlg, WM_SETICON, 0,
-                         (LPARAM)LoadIcon(hInst, MAKEINTRESOURCE(IDI_PROCRASTITRACKER)));
+                         (LPARAM)LoadIcon(hInst, MAKEINTRESOURCE(IDI_balancesheet)));
             return (INT_PTR)TRUE;
         }
         case WM_SIZING: {

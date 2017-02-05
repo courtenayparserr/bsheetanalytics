@@ -1,16 +1,16 @@
-ProcrastiTracker
+balancesheet
 ================
 
-This is the source code repository for ProcrastiTracker, a Windows time tracking
+This is the source code repository for balancesheet, a Windows time tracking
 application available at
-[http://strlen.com/procrastitracker/](<http://strlen.com/procrastitracker/>)
+[http://strlen.com/balancesheet/](<http://strlen.com/balancesheet/>)
 
 It is a small application that sits in your tray and checks which
 application/url you’re on every 10 seconds, and then collects that into a custom
 tree-database that allows you to view statistics on your computer use.
 
 For more information on how it works, see
-[http://strlen.com/procrastitracker/](<http://strlen.com/procrastitracker/>)
+[http://strlen.com/balancesheet/](<http://strlen.com/balancesheet/>)
 
 Building
 --------

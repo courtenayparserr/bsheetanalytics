@@ -12,7 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D4331D8B-5F63-4D37-8E4A-7D6D1E6934DF}</ProjectGuid>
-    <RootNamespace>procrastitracker</RootNamespace>
+    <RootNamespace>balancesheet</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -131,7 +131,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\src\procrastitracker.cpp" />
+    <ClCompile Include="..\src\balancesheet.cpp" />
     <ClCompile Include="..\src\sqlite3.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
@@ -265,10 +265,10 @@
     <Image Include="dot3.bmp" />
     <Image Include="icon1.ico" />
     <Image Include="procrast.ico" />
-    <Image Include="procrastitracker.ico" />
+    <Image Include="balancesheet.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="procrastitracker.rc" />
+    <ResourceCompile Include="balancesheet.rc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\PT\README.html" />
