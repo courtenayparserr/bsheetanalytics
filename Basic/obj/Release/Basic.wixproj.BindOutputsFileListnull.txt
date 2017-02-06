@@ -1,0 +1,2 @@
+C:\projects\test\balancesheetapp\Basic\bin\Release\Basic.msi
+C:\projects\test\balancesheetapp\Basic\bin\Release\Basic.wixpdb

@@ -1,0 +1,11 @@
+C:\projects\test\balancesheetapp\PT\concrt140d.dll
+C:\projects\test\balancesheetapp\PT\concrt140.dll
+C:\projects\test\balancesheetapp\PT\cpprest140_2_9.dll
+C:\projects\test\balancesheetapp\PT\cpprest140d_2_9.dll
+C:\projects\test\balancesheetapp\PT\balancesheet.exe
+C:\projects\test\balancesheetapp\PT\msvcp140d.dll
+C:\projects\test\balancesheetapp\PT\msvcp140.dll
+C:\projects\test\balancesheetapp\PT\ucrtbased.dll
+C:\projects\test\balancesheetapp\PT\vcruntime140d.dll
+C:\projects\test\balancesheetapp\PT\vcruntime140.dll
+C:\projects\test\balancesheetapp\PT\wastorage.dll

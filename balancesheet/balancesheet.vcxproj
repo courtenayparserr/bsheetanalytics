@@ -48,7 +48,7 @@
     <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)..\PT\</OutDir>
+    <OutDir>$(SolutionDir)\PT\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
@@ -65,7 +65,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>Oleacc.lib;Psapi.lib;comctl32.lib;Comdlg32.lib;shlwapi.lib;sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Oleacc.lib;Psapi.lib;comctl32.lib;Comdlg32.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -86,7 +86,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>Oleacc.lib;Psapi.lib;comctl32.lib;Comdlg32.lib;shlwapi.lib;sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Oleacc.lib;Psapi.lib;comctl32.lib;Comdlg32.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -110,7 +110,6 @@
     <ClInclude Include="..\src\prefview.h" />
     <ClInclude Include="..\src\regview.h" />
     <ClInclude Include="..\src\slaballoc.h" />
-    <ClInclude Include="..\src\sqlite3.h" />
     <ClInclude Include="..\src\statview.h" />
     <ClInclude Include="..\src\stdafx.h" />
     <ClInclude Include="..\src\timercallback.h" />
@@ -132,10 +131,6 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\src\balancesheet.cpp" />
-    <ClCompile Include="..\src\sqlite3.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="..\src\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -280,18 +275,13 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="packages\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.targets" Condition="Exists('packages\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.targets')" />
-    <Import Project="packages\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.targets" Condition="Exists('packages\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.targets')" />
-    <Import Project="packages\wastorage.v120.2.5.0\build\native\wastorage.v120.targets" Condition="Exists('packages\wastorage.v120.2.5.0\build\native\wastorage.v120.targets')" />
-    <Import Project="packages\wastorage.v140.2.5.0\build\native\wastorage.v140.targets" Condition="Exists('packages\wastorage.v140.2.5.0\build\native\wastorage.v140.targets')" />
+    <Import Project="..\packages\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.targets" Condition="Exists('..\packages\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.targets')" />
+    <Import Project="..\packages\wastorage.v140.2.5.0\build\native\wastorage.v140.targets" Condition="Exists('..\packages\wastorage.v140.2.5.0\build\native\wastorage.v140.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('packages\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v120.windesktop.msvcstl.dyn.rt-dyn.targets'))" />
-    <Error Condition="!Exists('packages\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.2.9.1\build\native\cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.targets'))" />
-    <Error Condition="!Exists('packages\wastorage.v120.2.5.0\build\native\wastorage.v120.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\wastorage.v120.2.5.0\build\native\wastorage.v120.targets'))" />
-    <Error Condition="!Exists('packages\wastorage.v140.2.5.0\build\native\wastorage.v140.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\wastorage.v140.2.5.0\build\native\wastorage.v140.targets'))" />
+    <Error Condition="!Exists('..\packages\wastorage.v140.2.5.0\build\native\wastorage.v140.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\wastorage.v140.2.5.0\build\native\wastorage.v140.targets'))" />
   </Target>
 </Project>

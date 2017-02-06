@@ -1,0 +1,6 @@
+obj\Release\Product.wixobj
+C:\projects\test\balancesheetapp\Basic\bin\Release\Basic.msi
+C:\projects\test\balancesheetapp\Basic\bin\Release\Basic.wixpdb
+obj\Release\Basic.wixproj.BindContentsFileListnull.txt
+obj\Release\Basic.wixproj.BindOutputsFileListnull.txt
+obj\Release\Basic.wixproj.BindBuiltOutputsFileListnull.txt

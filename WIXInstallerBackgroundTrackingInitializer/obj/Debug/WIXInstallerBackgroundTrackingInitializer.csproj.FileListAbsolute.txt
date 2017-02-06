@@ -34,3 +34,15 @@ C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Syste
 C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\obj\Debug\WIXInstallerBackgroundTrackingInitializer.csprojResolveAssemblyReference.cache
 C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\obj\Debug\Initializer.exe
 C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingInitializer\obj\Debug\Initializer.pdb
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Initializer.exe.config
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Initializer.exe
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Initializer.pdb
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Newtonsoft.Json.dll
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Debug\System.Data.SQLite.dll
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Debug\WIXInstallerBackgroundTrackingModels.dll
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Debug\WIXInstallerBackgroundTrackingModels.pdb
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Debug\Newtonsoft.Json.xml
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Debug\System.Data.SQLite.xml
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\obj\Debug\WIXInstallerBackgroundTrackingInitializer.csprojResolveAssemblyReference.cache
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\obj\Debug\Initializer.exe
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\obj\Debug\Initializer.pdb

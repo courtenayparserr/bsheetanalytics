@@ -11,3 +11,7 @@ C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingModesl\bin\Debug\WIXInstall
 C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingModesl\bin\Debug\WIXInstallerBackgroundTrackingModels.pdb
 C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingModesl\obj\Debug\WIXInstallerBackgroundTrackingModels.dll
 C:\projects\bsheet.ana\WIXInstallerBackgroundTrackingModesl\obj\Debug\WIXInstallerBackgroundTrackingModels.pdb
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingModesl\bin\Debug\WIXInstallerBackgroundTrackingModels.dll
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingModesl\bin\Debug\WIXInstallerBackgroundTrackingModels.pdb
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingModesl\obj\Debug\WIXInstallerBackgroundTrackingModels.dll
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingModesl\obj\Debug\WIXInstallerBackgroundTrackingModels.pdb

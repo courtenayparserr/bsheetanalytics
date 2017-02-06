@@ -75,9 +75,6 @@
     <ClInclude Include="resource.h">
       <Filter>resources</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\sqlite3.h">
-      <Filter>app\db</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\stdafx.cpp">
@@ -136,9 +133,6 @@
     </ClCompile>
     <ClCompile Include="..\zlib\zutil.c">
       <Filter>zlib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\sqlite3.c">
-      <Filter>app\db</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

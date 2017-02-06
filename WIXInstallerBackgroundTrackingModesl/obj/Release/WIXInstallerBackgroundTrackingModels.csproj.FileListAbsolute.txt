@@ -1,0 +1,4 @@
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingModesl\bin\Release\WIXInstallerBackgroundTrackingModels.dll
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingModesl\bin\Release\WIXInstallerBackgroundTrackingModels.pdb
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingModesl\obj\Release\WIXInstallerBackgroundTrackingModels.dll
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingModesl\obj\Release\WIXInstallerBackgroundTrackingModels.pdb

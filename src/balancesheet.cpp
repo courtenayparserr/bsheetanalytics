@@ -17,7 +17,6 @@ SlabAlloc pool;
 #include "tools.h"
 StringPool strpool;
 
-#include "sqlite3.h"
 
 #ifdef __MINGW32__
 #define sprintf_s snprintf
@@ -159,6 +158,7 @@ char filterstrcontents[100] = "";
 std::string emailNode = "";
 std::string userNode = "";
 std::string computerNode = "";
+std::string computerDomain = "";
 
 #include "day.h"
 #include "node.h"
@@ -168,7 +168,6 @@ char databaseroot[MAX_PATH];
 char databasemain[MAX_PATH];
 char databaseback[MAX_PATH];
 char databasetemp[MAX_PATH];
-char sqlitedbname[MAX_PATH];
 
 #include "nodedb.h"
 #include "ddeutil.h"
@@ -237,6 +236,27 @@ bool CreateTaskBarIcon(HWND hWnd, DWORD action) {
         Sleep(1000);
     }
     return false;
+}
+
+bool LPWSTR2String(std::string& outString, const LPWSTR inLPWSTR, UINT codepage = CP_ACP)
+{
+	bool retCode = false;
+	char* temp = 0;
+	int bytesRequired;
+	bytesRequired = WideCharToMultiByte(codepage, 0, inLPWSTR, -1, 0, 0, 0, 0);
+	if (bytesRequired > 0)
+	{
+		temp = new char[bytesRequired];
+		int rc = WideCharToMultiByte(codepage, 0, inLPWSTR, -1, temp, bytesRequired, 0, 0);
+		if (rc != 0)
+		{
+			temp[bytesRequired - 1] = 0;
+			outString = temp;
+			retCode = true;
+		}
+	}
+	delete[] temp;
+	return retCode;
 }
 
 BOOL FileRequest(HWND hWnd, char *requestfilename, size_t reqlen, char *defaultname, char *exts,
@@ -422,11 +442,11 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCm
     strcpy(databasemain, databaseroot);
     strcpy(databaseback, databaseroot);
     strcpy(databasetemp, databaseroot);
-	strcpy(sqlitedbname, databaseroot);
+	
     PathAppend(databasemain, "db.PT");
     PathAppend(databaseback, "db_BACKUP.PT");
     PathAppend(databasetemp, "db_TEMP.~PT");
-	PathAppend(sqlitedbname, "test.db");
+	
     starttime = now();
     endtime = now();
     //load(root, databasemain, false);
@@ -461,92 +481,26 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCm
 	if (GetComputerName(infoBuf, &bufCharCount))
 	{
 		computerNode = (TEXT("%s"), infoBuf);
-		MessageBox(NULL, (TEXT("%s"), infoBuf), "Computername Testing", MB_OK);		
+		//MessageBox(NULL, (TEXT("%s"), infoBuf), "Computername Testing", MB_OK);		
 	}
 
-	/*DSROLE_PRIMARY_DOMAIN_INFO_BASIC * info;
+	DSROLE_PRIMARY_DOMAIN_INFO_BASIC * info;
 	DWORD dw;
 
 	dw = DsRoleGetPrimaryDomainInformation(NULL,
 		DsRolePrimaryDomainInfoBasic,
 		(PBYTE *)&info);
 	if (dw != ERROR_SUCCESS)
-	{
-		wprintf(L"DsRoleGetPrimaryDomainInformation: %u\n", dw);
-		return dw;
+	{		
+		
 	}
 
-	if (info->DomainNameDns == NULL)
+	if (info->DomainNameDns != NULL)
 	{
-		wprintf(L"DomainNameDns is NULL\n");
+		LPWSTR2String(computerDomain, info->DomainNameDns);
+		//MessageBox(NULL, computerDomain.c_str(), "Domain", MB_OK);
 	}
-	else
-	{
-		wprintf(L"DomainNameDns: %s\n", info->DomainNameDns);
-	}
-*/
-
-	//// Open Database
-	//MessageBox(NULL, "Opening Test.db ...", "Sqlite Testing", MB_OK);
-	//sqlite3 *db;
-	//rc = sqlite3_open(sqlitedbname, &db);
-	//if (rc)
-	//{
-	//	//MessageBox(NULL, sqlite3_errmsg(db), "Error opening SQLite3 database: ", MB_OK);
-	//	sqlite3_close(db);
-	//}
-	//else
-	//{
-	//	//MessageBox(NULL, "Opened Test.db.", "Sqlite Testing", MB_OK);
-	//}
-
-	//const char *sqlSelect = "SELECT * FROM user_profile;";
-	//char **results = NULL;
-	//int rows, columns;
-	//std::string data = "";
-	//sqlite3_get_table(db, sqlSelect, &results, &rows, &columns, &error);
-	//if (rc)
-	//{
-	//	//MessageBox(NULL, sqlite3_errmsg(db), "Error executing SQLite3 query: ", MB_OK);
-	//	sqlite3_free(error);
-	//}
-	//else
-	//{
-	//	// Display Table
-	//	for (int rowCtr = 1; rowCtr <= rows; ++rowCtr)
-	//	{
-	//		for (int colCtr = 0; colCtr < columns; ++colCtr)
-	//		{
-	//			// Determine Cell Position
-	//			int cellPosition = (rowCtr * columns) + colCtr;
-
-	//			// Display Cell Value
-	//			if (colCtr == 1)
-	//			{
-	//				emailNode = results[cellPosition];
-	//			}
-	//			else if (colCtr == 2) {
-	//				userNode = results[cellPosition];
-	//			}
-	//			data += results[cellPosition];
-	//			data += "	";
-	//		}
-
-	//		// End Line
-	//		data += "\n";
-
-	//	}
-	//}
-
-	////MessageBox(NULL, emailNode.c_str(), "Email", MB_OK);
-	////MessageBox(NULL, userNode.c_str(), "User", MB_OK);
-	//sqlite3_free_table(results);
-
-	//// Close Database
-	//sqlite3_close(db);
-	////MessageBox(NULL, "Closed MyDb.db", "Sqlite Testing", MB_OK);
-
-	/////////////////////////////////////////////
+	
 
     firstday = starttime;
     lastsavetime = GetTickCount();

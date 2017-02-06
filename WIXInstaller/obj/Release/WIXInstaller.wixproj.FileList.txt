@@ -1,0 +1,8 @@
+obj\Release\Product.wixobj
+obj\Release\UserRegistrationDlg.wixobj
+C:\projects\test\balancesheetapp\WIXInstaller\bin\Release\cab1.cab
+C:\projects\test\balancesheetapp\WIXInstaller\bin\Release\WIXInstaller.msi
+C:\projects\test\balancesheetapp\WIXInstaller\bin\Release\WIXInstaller.wixpdb
+obj\Release\WIXInstaller.wixproj.BindContentsFileListnull.txt
+obj\Release\WIXInstaller.wixproj.BindOutputsFileListnull.txt
+obj\Release\WIXInstaller.wixproj.BindBuiltOutputsFileListnull.txt

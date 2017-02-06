@@ -1,0 +1,12 @@
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Release\Initializer.exe.config
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Release\Initializer.exe
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Release\Initializer.pdb
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Release\Newtonsoft.Json.dll
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Release\System.Data.SQLite.dll
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Release\WIXInstallerBackgroundTrackingModels.dll
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Release\WIXInstallerBackgroundTrackingModels.pdb
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Release\Newtonsoft.Json.xml
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\bin\Release\System.Data.SQLite.xml
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\obj\Release\WIXInstallerBackgroundTrackingInitializer.csprojResolveAssemblyReference.cache
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\obj\Release\Initializer.exe
+C:\projects\test\balancesheetapp\WIXInstallerBackgroundTrackingInitializer\obj\Release\Initializer.pdb

@@ -1,0 +1,3 @@
+C:\projects\test\balancesheetapp\WIXInstaller\bin\Release\cab1.cab
+C:\projects\test\balancesheetapp\WIXInstaller\bin\Release\WIXInstaller.msi
+C:\projects\test\balancesheetapp\WIXInstaller\bin\Release\WIXInstaller.wixpdb

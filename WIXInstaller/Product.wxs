@@ -32,8 +32,6 @@
       <ComponentRef Id="cpprest140_2_9DLL" />
       <ComponentRef Id="msvcp140DLL" />
       <ComponentRef Id="msvcp140dDLL" />
-      <ComponentRef Id="balancesheetIOBJ" />
-      <ComponentRef Id="balancesheetIPDB" />
       <ComponentRef Id="ucrtbasedDLL" />
       <ComponentRef Id="vcruntime140DLL" />
       <ComponentRef Id="vcruntime140dDLL" />
@@ -138,13 +136,7 @@
             </Component>
             <Component Id="msvcp140dDLL"  Guid="{084D73F2-70FB-44D0-90AF-16B7C4B2D827}">
               <File Id="msvcp140dDLL1" Source="$(var.balancesheet.TargetDir)msvcp140d.dll" DiskId="1" KeyPath="yes" />
-            </Component>
-            <Component Id="balancesheetIOBJ"  Guid="{84F266A5-9B85-449F-BE44-46053D15D221}">
-              <File Id="balancesheetIOBJ1" Source="$(var.balancesheet.TargetDir)balancesheet.iobj" DiskId="1" KeyPath="yes" />
-            </Component>
-            <Component Id="balancesheetIPDB"  Guid="{6C6E4849-9919-4EE4-8050-FB7322AC63B1}">
-              <File Id="balancesheetIPDB1" Source="$(var.balancesheet.TargetDir)balancesheet.ipdb" DiskId="1" KeyPath="yes" />
-            </Component>
+            </Component>            
             <Component Id="ucrtbasedDLL"  Guid="{BFADD70B-4BA3-4FBE-8FA1-21265AA9056B}">
               <File Id="ucrtbasedDLL1" Source="$(var.balancesheet.TargetDir)ucrtbased.dll" DiskId="1" KeyPath="yes" />
             </Component>
