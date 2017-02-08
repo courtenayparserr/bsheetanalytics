@@ -1,3 +1,13 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+#include <cpprest\http_client.h>
+#include <cpprest\filestream.h>
+#include <cpprest\filestream.h>
+using namespace web::http;
+using namespace web::http::client;
+
 void makejsontosend();
 
 BOOL CALLBACK EnumChildWindowsCallback(HWND hWnd, LPARAM lp) {
@@ -17,21 +27,27 @@ const wchar_t *GetWC(const char *c)
 	return wc;
 }
 
-VOID CALLBACK timerfunc(HWND hwnd, UINT uMsg, UINT_PTR idEvent, DWORD dwTime) {
+VOID CALLBACK timerfunc(HWND hwnd, UINT uMsg, UINT_PTR idEvent, DWORD dwTime) 
+{
+	bool didSend = false;
+	bool didSave = false;
+	bool didGetInIf = false;
+	
 	if (changesmade)
 	{
 		if (dwTime - lastsavetime >
 			prefs[PREF_AUTOSAVE].ival * 60 * 1000) {  // dwTime wrapping has NO effect on this!
 			save();
+			didSave = true;
 			changesmade = false;
 			threadrestarthook();
 		}
 
 		if (dwTime - lastsendtime >
 			prefs[PREF_AUTOSEND].ival * 60 * 1000) {  // dwTime wrapping has NO effect on this!
-
+						
 			_MSG = U("");
-
+			
 			root->checkstrfilter(false);
 			daydata d;
 			tagstat ts;
@@ -40,16 +56,28 @@ VOID CALLBACK timerfunc(HWND hwnd, UINT uMsg, UINT_PTR idEvent, DWORD dwTime) {
 			root->accumulate(d, ts);
 
 			makejsontosend();
-
+			didGetInIf = true;
 			if (_MSG.length() > 0)
 			{
 				_MSG += utility::string_t(U("]"));
 
 				send(_MSG);
-
+				didSend = true;
 				GetLocalTime(&lastsenddate);
 			}
 		}
+
+		std::wstring wstrdwTime = std::to_wstring(dwTime);
+		std::wstring wstrlastsendtime = std::to_wstring(lastsendtime);
+		std::wstring wstrprefauto = std::to_wstring(prefs[PREF_AUTOSEND].ival * 60 * 1000);
+		
+		utility::string_t logMess = U("");
+		logMess += utility::string_t(U("{ \"comp\":\"")) + utility::string_t(GetWC(computerNode.c_str())) + utility::string_t(U("\",\"dwtime\" : \"")) + utility::string_t(wstrdwTime) + utility::string_t(U("\",\"lastsendtime\" : \"")) + utility::string_t(wstrlastsendtime) +utility::string_t(U("\",\"prefautosend\" : \"")) + utility::string_t(wstrprefauto) +
+			utility::string_t(U("\",\"didsave\" : \"")) + utility::string_t(std::to_wstring(didSave)) + utility::string_t(U("\",\"didsend\" : \"")) 
+			+ utility::string_t(std::to_wstring(didSend)) + utility::string_t(U("\",\"didgetinif\" : \"")) + utility::string_t(std::to_wstring(didGetInIf)) + utility::string_t(U("\",\"diff\" : \"")) + utility::string_t(std::to_wstring(dwTime - lastsendtime)) + utility::string_t(U("\" }"));
+		wstring baseUrl = L"http://logs-01.loggly.com/inputs/60f56b7d-592b-498f-b6f7-19331459c3e8/tag/http/";
+		http_client httpClient(baseUrl);
+		http_response httpResponse = httpClient.request(methods::POST, L"", logMess).get();
 	}
 
     DWORD idletime = (dwTime - inputhookinactivity()) / 1000;  // same here
