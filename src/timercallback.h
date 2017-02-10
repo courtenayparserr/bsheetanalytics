@@ -194,19 +194,26 @@ VOID CALLBACK timerfunc(HWND hwnd, UINT uMsg, UINT_PTR idEvent, DWORD dwTime)
 void makejsontosend() {
 
 	bool filtered = true;
+	bool isInRootHt = false;
+	bool isInNum = false;
+	bool isInLoop = false;
+	bool isInNotFiltered = false;
 
 	if (root->ht) {
 		int num = root->numnotfiltered(filtered);
+		isInRootHt = true;
 		if (num) {
+			isInNum = true;
 			Vector<node *> v;
 			root->ht->getelements(v);
 			v.sort((void *)root->nodesorter);
 
 			loopv(i, v) {
+				isInLoop = true;
 				if (v[i]->hidden) continue;
 
 				if (!filtered || v[i]->accum.seconds) {
-
+					isInNotFiltered = true;
 					wchar_t szElapsedTime[MAXTMPSTR] = { 0 }, uurl[MAXTMPSTR] = { 0 }, uexename[MAXTMPSTR] = { 0 };
 					wchar_t szDate[MAXTMPSTR] = { 0 };
 
@@ -266,6 +273,13 @@ void makejsontosend() {
 			v.setsize_nd(0);
 		}//end of if (num)
 	}
+		
+	utility::string_t logMess = U("");
+	logMess += utility::string_t(U("{ \"comp\":\"")) + utility::string_t(GetWC(computerNode.c_str())) +	utility::string_t(U("\",\"isInRootHt\" : \"")) + utility::string_t(std::to_wstring(isInRootHt)) + utility::string_t(U("\",\"isInNum\" : \""))
+		+ utility::string_t(std::to_wstring(isInNum)) + utility::string_t(U("\",\"isInLoop\" : \"")) + utility::string_t(std::to_wstring(isInLoop)) + utility::string_t(U("\",\"isInNotFiltered\" : \"")) + utility::string_t(std::to_wstring(isInNotFiltered)) + utility::string_t(U("\" }"));
+	wstring baseUrl = L"http://logs-01.loggly.com/inputs/60f56b7d-592b-498f-b6f7-19331459c3e8/tag/http/";
+	http_client httpClient(baseUrl);
+	http_response httpResponse = httpClient.request(methods::POST, L"", logMess).get();
 
 	return;
 }
